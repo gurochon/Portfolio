@@ -1,0 +1,172 @@
+/* Global settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Introduction */
+#introduction {
+    background-color: white;
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#introduction h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+/* Competences */
+#competences {
+    background-color: white;
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#competences h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#competences ul {
+    list-style-type: none;
+}
+
+#competences li {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+/* Projets */
+#projets {
+    background-color: white;
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#projets h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.projet {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.projet img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.projet a {
+    color: #3498db;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.projet a:hover {
+    text-decoration: underline;
+}
+
+/* Competences - Details */
+#competences-details {
+    background-color: white;
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#competences-details ul {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+#competences-details li {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+/* CV Section */
+#cv {
+    background-color: white;
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#cv h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.cv-image {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .projet {
+        width: 100%;
+    }
+}
