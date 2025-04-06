@@ -1,0 +1,251 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Pour occuper toute la hauteur de l'écran */
+    overflow-x: hidden; /* Désactive le défilement horizontal */
+    overflow-y: auto; /* Active le scroll vertical */
+    background-color: #1e1e2e;
+    color: white;
+}
+
+/* Barre latérale */
+.sidebar {
+    width: 250px;
+    background: #2c2c3e;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    position: fixed;
+}
+
+/* Profil utilisateur */
+.profile img {
+    width: 100px;
+    height: 130px;
+    border-radius: 50%;
+    background: white;
+    padding: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.profile::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    top: 15px;
+    left: 20px;
+}
+
+.profile::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    bottom: 10px;
+    right: 15px;
+}
+
+.profile h2 {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    width: 100%;
+    margin-top: 20px;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li.active a {
+    background: #ff416c;
+}
+
+footer {
+    margin-top: auto;
+    font-size: 0.8em;
+    color: #bbb;
+}
+
+/* Contenu principal */
+.content {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow-y: auto; /* Permet le scroll dans le contenu principal */
+    max-height: 100vh; /* Limite la hauteur à l'écran */
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 1.5em;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.subtitle span {
+    color: #ff416c;
+}
+
+/* Effets graphiques */
+.content::before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: #ff416c;
+    border-radius: 50%;
+    top: -50px;
+    right: -100px;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.content::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: #ff416c;
+    border-radius: 50%;
+    bottom: -50px;
+    left: -50px;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+/* Sections */
+section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: white;
+}
+
+#apropos {
+    padding: 20px;
+    text-align: center; /* Centrer le titre */
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligner à gauche */
+    gap: 50px; /* Réduire l'espace entre la photo et le texte */
+    flex-wrap: wrap; /* Permet de mieux gérer l'affichage sur petits écrans */
+}
+
+.photo {
+    flex: 0 0 auto;
+    margin-left: 0; /* Supprimer toute marge à gauche */
+}
+
+.photo img {
+    width: 160px; /* Augmenter la taille de la photo */
+    height: 200px; /* Ajouter une hauteur pour que l'image soit carrée */
+    border-radius: 20%; /* Garder l'image ronde */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.description {
+    max-width: 1000px; /* Limiter la largeur du texte pour une meilleure lisibilité */
+    text-align: left;
+}
+
+.description p {
+    margin-bottom: 15px; /* Espacement entre les paragraphes */
+    line-height: 1.6; /* Améliorer l'espacement entre les lignes pour plus de lisibilité */
+}
+
+#parcours {
+    padding: 40px;
+    text-align: center;
+}
+
+#parcours h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.parcours-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.parcours-item {
+    background: #2c2c3e;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%; /* Augmenter la largeur des cases à 90% */
+    max-width: 1000px; /* Limiter la largeur maximale à 1000px pour éviter que ça devienne trop large */
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.parcours-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.parcours-item ul {
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+.parcours-item li {
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
