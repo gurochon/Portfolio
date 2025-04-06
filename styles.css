@@ -136,8 +136,8 @@ h1 {
     height: 400px;
     background: #ff416c;
     border-radius: 50%;
-    top: -50px;
-    right: -100px;
+    top: 100px;
+    right: 50px;
     opacity: 0.5;
     z-index: -1;
 }
