@@ -32,8 +32,8 @@ body {
 
 /* Profil utilisateur */
 .profile img {
-    width: 100px;
-    height: 130px;
+    width: 109px;
+    height: 140px;
     border-radius: 50%;
     background: white;
     padding: 5px;
@@ -189,7 +189,7 @@ h2 {
 }
 
 .photo img {
-    width: 160px; /* Augmenter la taille de la photo */
+    width: 145px; /* Augmenter la taille de la photo */
     height: 200px; /* Ajouter une hauteur pour que l'image soit carrée */
     border-radius: 20%; /* Garder l'image ronde */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
