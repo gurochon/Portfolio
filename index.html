@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Guillaume ROCHON</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="profile">
+            <h2>Guillaume ROCHON</h2>
+        </div>
+        <nav>
+            <ul>
+                <li class="active"><a href="#accueil">🏠 Accueil</a></li>
+                <li><a href="#parcours">📜 Parcours</a></li>
+                <li><a href="#cv">📂 Curriculum Vitae</a></li>
+                <li><a href="#veilles">📡 Veilles</a></li>
+                <li><a href="#contact">📧 Contact</a></li>
+                <li><a href="#projetIUT">🏫 Projet IUT'Orléans</a></li>
+            </ul>
+        </nav>
+        <footer>
+            <p>&copy; 2025 <strong>Guillaume ROCHON</strong></p>
+        </footer>
+    </aside>
+
+    <main class="content">
+        <section id="accueil" class="fade-in">
+            <h2>Bienvenue sur mon Portfolio</h2>
+            <p>Je suis <strong>Guillaume ROCHON</strong>, un passionné d'informatique, actuellement étudiant en <strong>BTS SIO (SISR)</strong> à Orléans. Mon domaine d'expertise : l'administration des systèmes et des réseaux. Ce portfolio est l'occasion pour moi de vous partager mon parcours, mes projets et mes compétences acquises durant mes études.</p>
+            <p>Je vous invite à explorer mes différentes sections pour en savoir plus sur mon parcours, découvrir mes réalisations et mon implication dans l'univers informatique.</p>
+            <p><strong>Ma mission :</strong> Contribuer au développement et à l'optimisation des infrastructures informatiques tout en restant à la pointe des nouvelles technologies.</p>
+            <p>Si vous êtes curieux d'en savoir plus ou si vous souhaitez discuter d'une collaboration, n'hésitez pas à me contacter via la section "Contact".</p>
+        </section>
+        
+
+        <section id="parcours">
+            <h2>Parcours</h2>
+            <div class="parcours-container">
+                <div class="parcours-item">
+                    <h3>2023-2025</h3>
+                    <p>BTS SIO (SISR) - Lycée Saint Paul Bourdon Blanc</p>
+                    <p>2025 : BTS SIO (SISR) - En cours</p>
+                    <p>2024 : Obtention du Permis de conduire</p>
+                </div>
+                <div class="parcours-item">
+                    <h3>2020-2023</h3>
+                    <p>Systèmes Numériques - Lycée Saint Paul Bourdon Blanc</p>
+                    <ul>
+                        <li>2023 : Obtention du Baccalauréat - Mention Bien</li>
+                        <li>2022 : Obtention de l’habilitation électrique (BR)</li>
+                    </ul>
+                </div>
+                <div class="parcours-item">
+                    <h3>2019-2020</h3>
+                    <p>3ème Professionnelle - Lycée Saint Paul Bourdon Blanc</p>
+                    <ul>
+                        <li>2020 : Obtention du Diplôme du Brevet - Mention Très Bien</li>
+                        <li>2020 : Obtention de l’ASSR2</li>
+                        <li>2019 : Certification de premiers secours (PSC1)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="cv">
+            <h2>Curriculum Vitae</h2>
+            <div class="cv-container">
+                <img id="cvImage" src="cv.jpg" alt="CV de Guillaume Rochon">
+            </div>
+            <div id="cvModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modalImage">
+            </div>
+        </section>
+
+        <script src="script.js"></script>
+
+        <section id="veilles">
+            <h2>VEILLES</h2>
+            <p>Je m'efforce de rester à jour avec les dernières tendances du domaine informatique. Voici quelques sujets sur lesquels je me tiens informé :</p>
+            <ul>
+                <li><strong>Sécurité Informatique :</strong> Les nouvelles vulnérabilités de sécurité et les meilleures pratiques pour protéger les systèmes d'information.</li>
+                <li><strong>Intelligence Artificielle :</strong> Les dernières avancées en IA et machine learning, et leur impact potentiel sur le secteur informatique.</li>
+                <li><strong>Outils et Logiciels :</strong> Découverte de nouveaux outils de développement et de gestion de projets qui améliorent l'efficacité et la productivité.</li>
+            </ul>
+        </section>                    
+
+        <section id="contact">
+            <h2>CONTACT</h2>
+            <p>Vous pouvez me contacter par email à l'adresse suivante : <a href="mailto:guillaume.rochon@example.com">guillaume.rochon@example.com</a></p>
+        </section>
+
+        <section id="projetIUT">
+            <h2>Projet IUT'Orléans</h2>
+            <p>J'ai réalisé un projet d'intégration de système d'information pour une entreprise fictive dans le cadre de mon BTS SIO SISR.</p>
+        </section>
+    </main>
+</body>
+</html>
