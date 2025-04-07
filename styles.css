@@ -24,10 +24,15 @@ body {
     height: 100vh;
     position: fixed;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+    transition: width 0.3s ease;
+}
+
+.sidebar:hover {
+    width: 280px;
 }
 
 .profile h2 {
-    font-size: 1.4em;
+    font-size: 1.27em;
     margin: 20px 0;
     text-align: center;
     color: #ff5f7e;
@@ -83,6 +88,7 @@ section {
     text-align: center;
 }
 
+/* Section Accueil */
 #accueil {
     height: 92vh; /* Section "Accueil" plus grande */
     display: flex;
@@ -92,6 +98,11 @@ section {
     text-align: center;
     background-color: #2c2c3e;
     border-radius: 3%;
+    background-image: url('background.jpg');
+    background-position: center;
+    background-size: cover;
+    color: white;
+    animation: fadeInUp 1s ease forwards;
 }
 
 #accueil h2 {
@@ -160,30 +171,46 @@ section {
     transition: transform 0.3s ease;
 }
 
-/* Container de la modale */
+#cv img:hover {
+    transform: scale(1.05);
+}
+
+/* Modal */
 .modal {
-    display: none; /* Masque le modal par défaut */
+    display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 9999;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
+    animation: fadeInModal 0.5s ease-out;
 }
 
-/* Contenu de la modale (l'image) */
+@keyframes fadeInModal {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Modal content */
 .modal-content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 95%; /* Augmenter la largeur maximale */
-    max-height: 90vh; /* Augmenter la hauteur maximale */
+    max-width: 95%;
+    max-height: 90vh;
     object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
-/* Style pour la croix de fermeture */
+/* Close button */
 .close {
     color: white;
     font-size: 2rem;
@@ -194,7 +221,7 @@ section {
     cursor: pointer;
 }
 
-/* Animation fade-in */
+/* Section fade-in animation */
 .fade-in {
     opacity: 0;
     animation: fadeInUp 1s ease forwards;
@@ -217,4 +244,101 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Footer with social icons */
+footer a {
+    margin: 0 10px;
+    color: #ff5f7e;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ff9966;
+}
+
+#certifications h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff5f7e;
+    text-align: center;
+}
+
+/* Section des certifications */
+.certifications-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cartes par ligne */
+    gap: 20px; /* Réduit l'espace entre les cartes horizontalement et verticalement */
+    justify-items: center; /* Centrer les cartes dans chaque cellule */
+    align-items: center; /* Centrer verticalement les cartes dans la cellule */
+}
+
+.certification-card {
+    background-color: #3a3a4e;
+    width: 100%; /* S'assurer que les cartes prennent toute la largeur disponible */
+    max-width: 350px; /* Largeur maximale de chaque carte agrandie */
+    height: 500px; /* Hauteur de la carte agrandie */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification-card h3 {
+    font-size: 1.6em; /* Légèrement plus grand pour correspondre à la taille des cartes */
+    color: #ff9966;
+    margin-bottom: 10px;
+}
+
+.certification-card p {
+    font-size: 1.2em; /* Augmenter la taille du texte */
+    line-height: 1.5;
+    color: white;
+}
+
+/* Effet au survol */
+.certification-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Modal pour SecNum */
+#secnumModal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: fadeInModal 0.5s ease-out;
+}
+
+#secnumModalImage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.secnum-close {
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-weight: bold;
+    cursor: pointer;
 }
