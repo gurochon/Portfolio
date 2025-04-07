@@ -162,7 +162,7 @@ section {
 
 /* Container de la modale */
 .modal {
-    display: none;
+    display: none; /* Masque le modal par défaut */
     position: fixed;
     z-index: 1;
     left: 0;
@@ -170,9 +170,6 @@ section {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /* Contenu de la modale (l'image) */
