@@ -342,3 +342,118 @@ footer a:hover {
     font-weight: bold;
     cursor: pointer;
 }
+
+/* Styles pour le bouton "Voir plus" */
+.voir-plus {
+    background-color: #ff5f7e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.voir-plus:hover {
+    background-color: #ff9966;
+}
+
+/* Styles pour le modal d'image */
+#imageModal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: fadeInModal 0.5s ease-out;
+}
+
+#imageModalContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Style pour la section "Veilles" */
+#veilles {
+    padding: 40px 20px;
+    background-color: #2c2c3e;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#veilles h2 {
+    font-size: 2.5em;
+    color: #ff5f7e;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#veilles p {
+    font-size: 1.2em;
+    color: #bbb;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.veilles-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.veille-card {
+    background-color: #3a3a4e;
+    border-radius: 10px;
+    padding: 20px;
+    width: 45%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.veille-card h3 {
+    font-size: 1.8em;
+    color: #ff9966;
+    margin-bottom: 10px;
+}
+
+.veille-card p {
+    font-size: 1.1em;
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+.veille-card ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.veille-card ul li {
+    margin-bottom: 10px;
+}
+
+.veille-card ul li a {
+    color: #ff5f7e;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.veille-card ul li a:hover {
+    color: #ff9966;
+}
+
+.veille-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
