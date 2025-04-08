@@ -80,43 +80,65 @@
 
         <section id="veilles">
             <h2>VEILLES</h2>
-            <p>Je m'efforce de rester à jour avec les dernières tendances du domaine informatique. Voici quelques sujets sur lesquels je me tiens informé :</p>
-            <ul>
-                <li><strong>Sécurité Informatique :</strong> Les nouvelles vulnérabilités de sécurité et les meilleures pratiques pour protéger les systèmes d'information.</li>
-                <li><strong>Intelligence Artificielle :</strong> Les dernières avancées en IA et machine learning, et leur impact potentiel sur le secteur informatique.</li>
-                <li><strong>Outils et Logiciels :</strong> Découverte de nouveaux outils de développement et de gestion de projets qui améliorent l'efficacité et la productivité.</li>
-            </ul>
-        </section>                    
-
+            <p>Je m'efforce de rester à jour avec les dernières tendances du domaine informatique. Voici quelques sources que je consulte régulièrement pour m'informer :</p>
+            <div class="veilles-container">
+                <div class="veille-card">
+                    <h3>Sécurité Informatique</h3>
+                    <p>Les dernières alertes et recommandations de sécurité :</p>
+                    <ul>
+                        <li><a href="https://www.cert.ssi.gouv.fr/" target="_blank">CERT-FR</a> - Dernières alertes et recommandations de sécurité.</li>
+                        <li><a href="https://www.undernews.fr/" target="_blank">UnderNews</a> - Analyses et conseils pour se protéger.</li>
+                    </ul>
+                </div>
+                <div class="veille-card">
+                    <h3>Actualités Technologiques</h3>
+                    <p>Les dernières vulnérabilités et actualités technologiques :</p>
+                    <ul>
+                        <li><a href="https://www.zataz.com/" target="_blank">ZATAZ</a> - Informations sur les dernières vulnérabilités et actualités technologiques.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+                
         <section id="certifications">
             <h2>Certifications</h2>
-            
             <div class="certifications-container">
                 <!-- Certification Voltaire -->
                 <div class="certification-card">
                     <h3>Certification Voltaire</h3>
                     <p>Atteste de mes compétences en orthographe et rédaction.</p>
+                    <button class="voir-plus" data-image="1.png">Voir plus</button>
                 </div>
         
                 <!-- Certification SecNum -->
                 <div class="certification-card">
                     <h3>Certification SecNum</h3>
                     <p>Atteste de mes compétences en sécurité numérique et cybersécurité.</p>
+                    <button class="voir-plus" data-image="2.png">Voir plus</button>
                 </div>
         
                 <!-- Badge Objectif IPv6 -->
                 <div class="certification-card">
                     <h3>Certification FunMOOC</h3>
                     <p>Objectif IPv6</p>
+                    <button class="voir-plus" data-image="3.jpg">Voir plus</button>
                 </div>
         
                 <!-- Badge Impacts Environnementaux du Numérique -->
                 <div class="certification-card">
                     <h3>Certification FunMOOC</h3>
                     <p>Impacts Environnementaux du numérique</p>
+                    <button class="voir-plus" data-image="4.png">Voir plus</button>
                 </div>
             </div>
-        </section>        
+        
+            <!-- Modal pour afficher les images -->
+            <div id="imageModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="imageModalContent">
+            </div>
+        </section>
+              
 
         <section id="projetIUT">
             <h2>Projet IUT'Orléans</h2>
