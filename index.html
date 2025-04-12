@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Portfolio - Guillaume ROCHON</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -13,12 +14,13 @@
         </div>
         <nav>
             <ul>
-                <li class="active"><a href="#accueil">🏠 Accueil</a></li>
-                <li><a href="#parcours">📜 Parcours</a></li>
-                <li><a href="#cv">📃 Curriculum Vitae</a></li>
-                <li><a href="#veilles">📡 Veilles</a></li>
-                <li><a href="#certifications">✨ Certifications</a></li>
-                <li><a href="#projetIUT">🏫 Projet IUT'Orléans</a></li>
+                <li class="active"><a href="#accueil"><i class="fas fa-home"></i> &nbsp;&nbsp;Accueil</a></li>
+                <li><a href="#parcours"><i class="fas fa-road"></i> &nbsp;&nbsp;Parcours</a></li>
+                <li><a href="#experiences"><i class="fas fa-briefcase"></i> &nbsp;&nbsp;Expériences Pro</a></li>
+                <li><a href="#projetIUT"><i class="fas fa-project-diagram"></i> &nbsp;&nbsp;Mes Projets</a></li>
+                <li><a href="#certifications"><i class="fas fa-award"></i> &nbsp;&nbsp;Certifications</a></li>
+                <li><a href="#cv"><i class="fas fa-file-alt"></i> &nbsp;&nbsp;Curriculum Vitae</a></li>
+                <li><a href="#veilles"><i class="fas fa-binoculars"></i> &nbsp;&nbsp;Veilles</a></li>
             </ul>
         </nav>
         <footer>
@@ -29,20 +31,22 @@
     <main class="content">
         <section id="accueil" class="fade-in">
             <h2>Bienvenue sur le Portfolio</h2>
-            <p>Bonjour ! Je suis <strong>Guillaume ROCHON</strong>, étudiant passionné en informatique, spécialisé dans l'administration des systèmes et réseaux.</p><br>
+            <p>Bonjour ! Je suis <strong>Guillaume ROCHON</strong>, étudiant passionné en informatique, spécialisé dans l'administration des systèmes et réseaux.</p>
             <p>Actuellement en <strong>BTS SIO (SISR)</strong> à Orléans, je suis déterminé à contribuer au développement et à l'optimisation des infrastructures informatiques.</p>
-            <p>Ce portfolio est une vitrine de mon parcours académique, de mes projets et de mes compétences. Explorez les différentes sections pour découvrir mes réalisations et mon implication dans le domaine informatique.</p><br>
+            <p>Ce portfolio est une vitrine de mon parcours académique, de mes projets et de mes compétences. Explorez les différentes sections pour découvrir mes réalisations et mon implication dans le domaine informatique.</p>
             <p>Ma mission est de rester à la pointe des nouvelles technologies et de les intégrer efficacement dans mes projets.</p>
         </section>
-        
+
         <section id="parcours">
             <h2>Parcours</h2>
             <div class="parcours-container">
                 <div class="parcours-item">
                     <h3>2023-2025</h3>
                     <p>BTS SIO (SISR) - Lycée Saint Paul Bourdon Blanc</p>
-                    <p>2025 : BTS SIO (SISR) - En cours</p>
-                    <p>2024 : Obtention du Permis de conduire</p>
+                    <ul>
+                        <li>2025 : BTS SIO (SISR) - En cours</li>
+                        <li>2024 : Obtention du Permis de conduire</li>
+                    </ul>
                 </div>
                 <div class="parcours-item">
                     <h3>2020-2023</h3>
@@ -64,6 +68,79 @@
             </div>
         </section>
 
+        <section id="experiences">
+            <h2>Mes Expériences Professionnelles</h2>
+            <div class="experiences-container">
+                <div class="experience-card">
+                    <h3>ICOA (IUT CHIMIE)</h3>
+                    <p><strong>Durée :</strong> 5 semaines</p>
+                    <p><strong>Missions :</strong>
+                        <ul>
+                            <p>Configuration de certificats pour une authentification 802.1X</p>
+                            <p>Installation borne WIFI</p>
+                            <p>Configuration de switch (Huawei, Cisco)</p>
+                            <p>Remplacement de disques durs</p>
+                        </ul>
+                    </p>
+                </div>
+                <div class="experience-card">
+                    <h3>DSI FRANCE TRAVAIL</h3>
+                    <p><strong>Durée :</strong> 7 semaines</p>
+                    <p><strong>Missions :</strong>
+                        <ul>
+                            <p>Support IT, Gestion de ticket (ServiceNow)</p>
+                            <p>Configuration Dashboard Kibana</p>
+                            <p>Mise à jour d'antivirus pour serveur (2008, 2012, 2016, 2022)</p>
+                            <p>Automatisation des tâches (AHK)</p>
+                            <p>Restauration de fichiers supprimés</p>
+                            <p>Ajout de CPU et de RAM sur VMware</p>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetIUT">
+            <h2>Mes Projets</h2>
+            <p>
+                <ul>
+                    <p>Projet IUT'Orléans</p>
+                    <p>Projet BEG</p>
+                    <p>Projet LEARNING TREE</p>
+                </ul>
+            </p>
+        </section>
+
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <div class="certifications-container">
+                <div class="certification-card">
+                    <h3>Certification Voltaire</h3>
+                    <p>Atteste de mes compétences en orthographe et rédaction.</p>
+                    <button class="voir-plus" data-image="1.png">Voir plus</button>
+                </div>
+                <div class="certification-card">
+                    <h3>Certification SecNum</h3>
+                    <p>Atteste de mes compétences en sécurité numérique et cybersécurité.</p>
+                    <button class="voir-plus" data-image="2.png">Voir plus</button>
+                </div>
+                <div class="certification-card">
+                    <h3>Certification FunMOOC</h3>
+                    <p>Objectif IPv6</p>
+                    <button class="voir-plus" data-image="3.jpg">Voir plus</button>
+                </div>
+                <div class="certification-card">
+                    <h3>Certification FunMOOC</h3>
+                    <p>Impacts Environnementaux du numérique</p>
+                    <button class="voir-plus" data-image="4.png">Voir plus</button>
+                </div>
+            </div>
+            <div id="imageModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="imageModalContent">
+            </div>
+        </section>
+
         <section id="cv">
             <h2>Curriculum Vitae</h2>
             <div class="cv-container">
@@ -74,8 +151,6 @@
                 <img class="modal-content" id="modalImage">
             </div>
         </section>
-
-        <script src="script.js"></script>
 
         <section id="veilles">
             <h2>VEILLES</h2>
@@ -98,51 +173,7 @@
                 </div>
             </div>
         </section>
-                
-        <section id="certifications">
-            <h2>Certifications</h2>
-            <div class="certifications-container">
-                <!-- Certification Voltaire -->
-                <div class="certification-card">
-                    <h3>Certification Voltaire</h3>
-                    <p>Atteste de mes compétences en orthographe et rédaction.</p>
-                    <button class="voir-plus" data-image="1.png">Voir plus</button>
-                </div>
-        
-                <!-- Certification SecNum -->
-                <div class="certification-card">
-                    <h3>Certification SecNum</h3>
-                    <p>Atteste de mes compétences en sécurité numérique et cybersécurité.</p>
-                    <button class="voir-plus" data-image="2.png">Voir plus</button>
-                </div>
-        
-                <!-- Badge Objectif IPv6 -->
-                <div class="certification-card">
-                    <h3>Certification FunMOOC</h3>
-                    <p>Objectif IPv6</p>
-                    <button class="voir-plus" data-image="3.jpg">Voir plus</button>
-                </div>
-        
-                <!-- Badge Impacts Environnementaux du Numérique -->
-                <div class="certification-card">
-                    <h3>Certification FunMOOC</h3>
-                    <p>Impacts Environnementaux du numérique</p>
-                    <button class="voir-plus" data-image="4.png">Voir plus</button>
-                </div>
-            </div>
-        
-            <!-- Modal pour afficher les images -->
-            <div id="imageModal" class="modal">
-                <span class="close">&times;</span>
-                <img class="modal-content" id="imageModalContent">
-            </div>
-        </section>
-              
-
-        <section id="projetIUT">
-            <h2>Projet IUT'Orléans</h2>
-            <p>J'ai réalisé un projet d'intégration de système d'information pour une entreprise fictive dans le cadre de mon BTS SIO SISR.</p>
-        </section>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
