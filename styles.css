@@ -429,7 +429,6 @@ footer a:hover {
 .voir-plus:hover {
     background-color: #ff9966;
 }
-
 #contact {
     margin-top: 50px;
     padding: 40px 20px;
@@ -522,4 +521,58 @@ footer a:hover {
     }
 }
 
-  
+/* Project Section */
+.project-container {
+    display: flex;
+    flex-direction: column; /* Empile les projets verticalement */
+    gap: 40px; /* Augmente l'espace entre les projets */
+    padding: 20px; /* Ajoute un padding autour du conteneur de projets */
+}
+
+.project-card {
+    background-color: #3a3a4e;
+    border-radius: 10px;
+    padding: 30px; /* Augmente le padding interne des cartes de projet */
+    width: 100%; /* Prend toute la largeur disponible */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card h3 {
+    font-size: 2em; /* Augmente la taille du titre */
+    color: #ff9966;
+    margin-bottom: 20px; /* Augmente l'espace sous le titre */
+}
+
+.project-card p {
+    font-size: 1.2em; /* Augmente la taille du texte */
+    color: #bbb;
+    margin-bottom: 20px; /* Augmente l'espace sous les paragraphes */
+    line-height: 1.8; /* Augmente l'espace entre les lignes */
+    text-align: justify; /* Justifie le texte pour une meilleure lisibilité */
+}
+
+.project-card button {
+    background-color: #ff5f7e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    margin-right: 10px; /* Ajoute un espace entre les boutons */
+}
+
+.project-card button:hover {
+    background-color: #ff9966;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+
+
