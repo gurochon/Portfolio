@@ -15,9 +15,10 @@ body {
     color: white;
 }
 
+
 /* Sidebar Styles */
 .sidebar {
-    width: 250px;
+    width: 270px;
     background: #2c2c3e;
     padding: 20px;
     display: flex;
@@ -31,6 +32,7 @@ body {
 
 .sidebar:hover {
     width: 280px;
+    
 }
 
 .profile h2 {
@@ -62,6 +64,7 @@ nav ul li a:hover,
 nav ul li.active a {
     background: linear-gradient(135deg, #ff5f7e, #ff9966);
     transform: scale(1.05);
+    text-decoration: none !important;
 }
 
 footer {
@@ -253,7 +256,7 @@ footer a:hover {
 
 .certifications-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 cartes par ligne */
+    grid-template-columns: repeat(3, 1fr); /* 3 cartes par ligne */
     gap: 20px; /* Réduit l'espace entre les cartes horizontalement et verticalement */
     justify-items: center; /* Centrer les cartes dans chaque cellule */
     align-items: center; /* Centrer verticalement les cartes dans la cellule */
@@ -261,9 +264,9 @@ footer a:hover {
 
 .certification-card {
     background-color: #3a3a4e;
-    width: 100%; /* S'assurer que les cartes prennent toute la largeur disponible */
-    max-width: 350px; /* Largeur maximale de chaque carte agrandie */
-    height: 500px; /* Hauteur de la carte agrandie */
+    width: 95%; /* S'assurer que les cartes prennent toute la largeur disponible */
+    max-width: 3500px; /* Largeur maximale de chaque carte agrandie */
+    height: 350px; /* Hauteur de la carte agrandie */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -573,6 +576,100 @@ footer a:hover {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
+.section-bubbles {
+    padding: 40px 20px;
+    background-color: #2c2c3e;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    text-align: center;
+    color: white;
+    margin-bottom: 60px;
+}
+
+.section-bubbles h2 {
+    font-size: 2.5em;
+    color: #ff5f7e;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.bubbles-container {
+    display: flex;
+    flex-direction: column; /* Pour que les bulles s'empilent verticalement */
+    align-items: center;     /* Centre horizontalement les bulles */
+    gap: 30px;               /* Espace entre chaque bulle */
+}
+
+
+.bubble {
+    background-color: #3a3a4e;
+    border-radius: 20px;
+    padding: 40px 50px; /* Padding raisonnable pour contenu large */
+    width: 600px;        /* Grande largeur comme tu le voulais */
+    min-height: 300px;   /* Pour garantir une bonne hauteur visuelle */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;    /* Aligne le texte à gauche */
+    display: block;      /* Annule le flex qui cassait l’alignement */
+    overflow: visible;   /* Laisse le texte s’exprimer */
+    white-space: normal; /* Permet les retours à la ligne */
+}
 
 
 
+.bubble:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+.bubble-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.bubble-icon {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1); /* rend les icônes blanches */
+}
+
+.bubble-header h3 {
+    font-size: 1.8em;
+    color: #ff9966;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.bubble-list {
+    list-style: none;
+    padding-left: 20px;
+    color: #bbb;
+}
+
+.bubble-list li {
+    margin-bottom: 12px;
+    font-size: 1.1em;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 2rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1001;
+    user-select: none;
+    transform: translateY(-50%);
+}
+.arrow-left {
+    left: 20px;
+}
+.arrow-right {
+    right: 20px;
+}
