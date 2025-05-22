@@ -1,5 +1,8 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Fonction pour ouvrir l'image dans une nouvelle fenêtre
+document.addEventListener("DOMContentLoaded", function () {
+    let currentImageIndex = 1;
+    let baseImagePath = "";
+
+    // Fonction pour ouvrir l'image dans une nouvelle fenêtre (CV uniquement)
     const openImageInNewWindow = (imageSrc) => {
         const newWindow = window.open("", "_blank");
         if (newWindow) {
@@ -35,49 +38,102 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     };
 
-    // Ouvrir l'image du CV dans une nouvelle fenêtre au clic
-    document.getElementById('cvImage').onclick = function() {
+    // Ouvrir le CV dans une nouvelle fenêtre
+    document.getElementById('cvImage').onclick = function () {
         openImageInNewWindow(this.src);
     };
 
-    // Fonction pour ouvrir le modal d'image
-    const openModal = (modalId, imageSrc) => {
+    // Fonction pour ouvrir un modal
+    const openModal = (modalId, imageSrc, isDoc = false) => {
         const modal = document.getElementById(modalId);
         modal.style.display = "block";
-        modal.querySelector('.modal-content').src = imageSrc;
+        const modalImage = modal.querySelector('.modal-content');
+        modalImage.src = imageSrc;
+
+        if (isDoc) {
+            const parts = imageSrc.split('/');
+            baseImagePath = parts.slice(0, -1).join('/');
+            currentImageIndex = parseInt(parts[parts.length - 1]);
+
+            // Ajouter les flèches si elles ne sont pas déjà là
+            if (!modal.querySelector('.arrow-left')) {
+                const leftArrow = document.createElement("span");
+                leftArrow.innerHTML = "&#9664;";
+                leftArrow.className = "arrow arrow-left";
+                modal.appendChild(leftArrow);
+
+                const rightArrow = document.createElement("span");
+                rightArrow.innerHTML = "&#9654;";
+                rightArrow.className = "arrow arrow-right";
+                modal.appendChild(rightArrow);
+
+                leftArrow.onclick = () => {
+                    if (currentImageIndex > 1) {
+                        currentImageIndex--;
+                        modalImage.src = `${baseImagePath}/${currentImageIndex}.jpg`;
+                    }
+                };
+
+                rightArrow.onclick = () => {
+                    currentImageIndex++;
+                    modalImage.src = `${baseImagePath}/${currentImageIndex}.jpg`;
+                };
+            }
+        }
     };
 
-    // Fonction pour fermer le modal
-    const closeModal = (modalId) => {
-        document.getElementById(modalId).style.display = "none";
-    };
-
-    // Ouvrir le modal d'image au clic sur "Voir plus" pour les certifications
+    // Ouvrir une image en modal (certifs, docs, etc.)
     document.querySelectorAll('.voir-plus').forEach(button => {
-        button.onclick = function() {
+        button.onclick = function () {
             const imageSrc = this.getAttribute('data-image');
-            openModal('imageModal', imageSrc);
+            const isDoc = this.getAttribute('data-type') === 'doc'; // uniquement pour "Documentation"
+            openModal('imageModal', imageSrc, isDoc);
         };
     });
 
-    // Fermer la modal au clic sur le bouton de fermeture
+    // Fermer les modales
     document.querySelectorAll('.close').forEach(closeButton => {
-        closeButton.onclick = function() {
-            closeModal('imageModal');
+        closeButton.onclick = function () {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = "none";
+
+            // Nettoyer les flèches si elles existent
+            const left = modal.querySelector('.arrow-left');
+            const right = modal.querySelector('.arrow-right');
+            if (left) left.remove();
+            if (right) right.remove();
         };
     });
 
-    // Fonction de défilement fluide vers chaque section
+    // Défilement fluide vers les sections
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').substring(1);
             const targetElement = document.getElementById(targetId);
+            const offset = 15;
 
-            window.scrollTo({
-                top: targetId === "accueil" ? 0 : targetElement.offsetTop,
-                behavior: 'smooth'
-            });
+            if (targetElement) {
+                const scrollPosition = targetElement.offsetTop - offset;
+                window.scrollTo({
+                    top: scrollPosition < 0 ? 0 : scrollPosition,
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 });
+
+// Mise à jour active lien navbar
+const currentPath = window.location.pathname;
+const navLinks = document.querySelectorAll('nav ul li a');
+
+navLinks.forEach(link => {
+    if (link.getAttribute('href') === currentPath) {
+        link.parentElement.classList.add('active');
+    } else {
+        link.parentElement.classList.remove('active');
+    }
+});
+
+
