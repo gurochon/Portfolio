@@ -19,8 +19,8 @@
                 <li class="active"><a href="#accueil"><i class="fas fa-home"></i> &nbsp;&nbsp;Accueil</a></li>
                 <li><a href="#parcours"><i class="fas fa-road"></i> &nbsp;&nbsp;Parcours</a></li>
                 <li><a href="#experiences"><i class="fas fa-briefcase"></i> &nbsp;&nbsp;Expériences Pro</a></li>
-                <li><a href="#competences"><i class="fas fa-tools"></i> &nbsp;&nbsp;Compétences</a></li>
                 <li><a href="#projetIUT"><i class="fas fa-project-diagram"></i> &nbsp;&nbsp;Mes Projets</a></li>
+                <li><a href="#competences"><i class="fas fa-tools"></i> &nbsp;&nbsp;Compétences</a></li>
                 <li><a href="#certifications"><i class="fas fa-award"></i> &nbsp;&nbsp;Certifications</a></li>
                 <li><a href="#cv"><i class="fas fa-file-alt"></i> &nbsp;&nbsp;Curriculum Vitae</a></li>
                 <li><a href="#veilles"><i class="fas fa-binoculars"></i> &nbsp;&nbsp;Veilles</a></li>
@@ -37,11 +37,12 @@
             <h2>Bienvenue sur mon Portfolio</h2>
             <p>Bonjour ! Je suis <strong>Guillaume ROCHON</strong>, étudiant passionné en informatique, spécialisé dans
                 l'administration des systèmes et réseaux.</p>
-            <p>Actuellement en <strong>BTS SIO (SISR)</strong> à Orléans, je prépare</p> 
+            <p>Actuellement en <strong>BTS SIO (SISR)</strong> à Orléans, je prépare</p>
             <p>pour mes épreuves de fin d'année.</p><br>
             <p>Après l’obtention de mon diplôme, je prévois de partir un an au Canada pour enrichir mon expérience et
                 découvrir de nouvelles opportunités.</p>
-            <p>Mon objectif est de m’y installer durablement afin d’y construire mon avenir personnel et professionnel.</p><br>
+            <p>Mon objectif est de m’y installer durablement afin d’y construire mon avenir personnel et professionnel.
+            </p><br>
             <p>Ce portfolio retrace l’ensemble de mon expérience acquise durant ces deux années de BTS, à travers mes
                 projets, stages et apprentissages.</p>
         </section>
@@ -109,6 +110,60 @@
             </div>
         </section>
 
+        <section id="projetIUT">
+            <h2>Mes Projets</h2>
+            <div class="project-container">
+
+
+                <div class="project-card">
+                    <h3>Projet 1 : LEARNING TREE</h3>
+                    <p>
+                        Nous avons été chargés de mener une étude approfondie sur l’implantation du câblage réseau,
+                        accompagnée de la réalisation d’un schéma global détaillé de l’infrastructure envisagée.
+                        Ce projet comprenait la conception d’un plan réseau précis pour la salle, incluant un plan
+                        d’adressage IP, ainsi que l’élaboration de trois devis clairs pour l’acquisition des équipements
+                        actifs nécessaires. Enfin, nous avons défini un plan de nommage complet, adapté aux besoins
+                        spécifiques de l’entreprise LEARNING TREE.
+                    </p>
+                    <button class="voir-plus" data-image="beg/1.jpg" data-type="doc">Documentation</button>
+                </div>
+                <div class="project-card">
+                    <h3>Projet 2 : BEG</h3>
+                    <p>
+                        Le Pôle SISL, spécialisé dans l’intégration et la gestion des systèmes d'information, est
+                        intervenu auprès de l’entreprise BEG afin de renforcer et moderniser son infrastructure
+                        informatique.
+                        Notre mission visait à déployer des services clés pour améliorer la gestion des utilisateurs,
+                        renforcer la sécurité des données et optimiser la performance du réseau.
+                        Le projet englobait plusieurs volets stratégiques, notamment la configuration d’un Active
+                        Directory pour la gestion centralisée des comptes, la mise en place de profils itinérants,
+                        la sécurisation des partages réseau, ainsi que le déploiement de services essentiels tels que
+                        les serveurs FTP, les pare-feu et les serveurs d’impression.
+                    </p>
+                    <button class="voir-plus" data-image="Lt/1.jpg" data-type="doc">Documentation</button>
+                    <button class="voir-plus" data-image="comp/Schéma réseau.drawio.png">Schéma</button>
+                </div>
+                <div class="project-card">
+                    <h3>Projet 3 : IUT'Orléans</h3>
+                    <p>
+                        La DSI de l’IUT d’Orléans, en charge de six départements, a sollicité notre société de services
+                        POLSISL pour mener plusieurs missions à fort enjeu. Nous avons tout d’abord proposé un
+                        nouveau plan de nommage et d’adressage IP, puis réalisé un audit complet de l’infrastructure
+                        réseau dans l’optique de son évolution.
+                        L’annuaire a été réorganisé, certains serveurs ont été migrés vers Windows Server 2025, et
+                        plusieurs tâches liées à l’Active Directory ont été automatisées.
+                        Le projet avait également pour objectifs de fluidifier les échanges entre étudiants et
+                        enseignants, de renforcer la sécurité périmétrique,
+                        et de permettre un accès sécurisé au système d’information depuis l’extérieur. Enfin, nous avons
+                        consolidé la politique de sauvegarde, réduit les coûts liés au stockage,
+                        et mis en place de nouveaux services tels que la supervision réseau et la gestion du parc
+                        informatique.
+                    </p>
+                    <button class="voir-plus" data-image="iuto/1.jpg" data-type="doc">Documentation</button>
+                </div>
+            </div>
+        </section>
+
         <section id="competences" class="section-bubbles">
             <h2>Mes Compétences</h2>
             <div class="bubbles-container">
@@ -117,7 +172,7 @@
                     <div class="bubble-header">
                         <h3>Supervision</h3>
                     </div>
-                    <p>Zabbix<br>Splunk</p>
+                    <p>Zabbix<br>Splunk<br>Elasticsearch & Kibana </p>
                 </div>
 
                 <div class="bubble">
@@ -150,13 +205,6 @@
 
                 <div class="bubble">
                     <div class="bubble-header">
-                        <h3>Base de données</h3>
-                    </div>
-                    <p>MariaDB<br>DBeaver<br>HeidiSQL<br>OmniDB<br>DB Browser<br>SQLiteStudio</p>
-                </div>
-
-                <div class="bubble">
-                    <div class="bubble-header">
                         <h3>Matériel physique</h3>
                     </div>
                     <p>Routeur Cisco 1841<br>Switch Cisco 2960<br>Switch Huawei<br>Switch Aruba<br>Stormshield SN210</p>
@@ -166,7 +214,7 @@
                     <div class="bubble-header">
                         <h3>Outils de sécurité</h3>
                     </div>
-                    <p>Squid</p>
+                    <p>Squid<br>pfSense</p>
                 </div>
 
                 <div class="bubble">
@@ -180,14 +228,7 @@
                     <div class="bubble-header">
                         <h3>Serveur de déploiement</h3>
                     </div>
-                    <p>FOG<br>TFTPD64</p>
-                </div>
-
-                <div class="bubble">
-                    <div class="bubble-header">
-                        <h3>CMS</h3>
-                    </div>
-                    <p>Hugo<br>WordPress</p>
+                    <p>Fog<br>Tftpd64</p>
                 </div>
 
                 <div class="bubble">
@@ -197,59 +238,6 @@
                     <p>GPO Windows<br>Script Python et PowerShell<br>Bash<br>Batch</p>
                 </div>
 
-            </div>
-        </section>
-
-
-        <section id="projetIUT">
-            <h2>Mes Projets</h2>
-            <div class="project-container">
-                <div class="project-card">
-                    <h3>Projet 1 : IUT'Orléans</h3>
-                    <p>
-                        La DSI de l’IUT d’Orléans, en charge de six départements, a sollicité notre société de services
-                        POLSISL pour mener plusieurs missions à fort enjeu. Nous avons tout d’abord proposé un
-                        nouveau plan de nommage et d’adressage IP, puis réalisé un audit complet de l’infrastructure
-                        réseau dans l’optique de son évolution.
-                        L’annuaire a été réorganisé, certains serveurs ont été migrés vers Windows Server 2025, et
-                        plusieurs tâches liées à l’Active Directory ont été automatisées.
-                        Le projet avait également pour objectifs de fluidifier les échanges entre étudiants et
-                        enseignants, de renforcer la sécurité périmétrique,
-                        et de permettre un accès sécurisé au système d’information depuis l’extérieur. Enfin, nous avons
-                        consolidé la politique de sauvegarde, réduit les coûts liés au stockage,
-                        et mis en place de nouveaux services tels que la supervision réseau et la gestion du parc
-                        informatique.
-                    </p>
-                    <button class="voir-plus" data-image="Schéma réseau.drawio.png">Documentation</button>
-                </div>
-                <div class="project-card">
-                    <h3>Projet 2 : BEG</h3>
-                    <p>
-                        Le Pôle SISL, spécialisé dans l’intégration et la gestion des systèmes d'information, est
-                        intervenu auprès de l’entreprise BEG afin de renforcer et moderniser son infrastructure
-                        informatique.
-                        Notre mission visait à déployer des services clés pour améliorer la gestion des utilisateurs,
-                        renforcer la sécurité des données et optimiser la performance du réseau.
-                        Le projet englobait plusieurs volets stratégiques, notamment la configuration d’un Active
-                        Directory pour la gestion centralisée des comptes, la mise en place de profils itinérants,
-                        la sécurisation des partages réseau, ainsi que le déploiement de services essentiels tels que
-                        les serveurs FTP, les pare-feu et les serveurs d’impression.
-                    </p>
-                    <button class="voir-plus" data-image="beg/1.jpg" data-type="doc">Documentation</button>
-                    <button class="voir-plus" data-image="comp/Schéma réseau.drawio.png">Schéma</button>
-                </div>
-                <div class="project-card">
-                    <h3>Projet 3 : LEARNING TREE</h3>
-                    <p>
-                        Nous avons été chargés de mener une étude approfondie sur l’implantation du câblage réseau,
-                        accompagnée de la réalisation d’un schéma global détaillé de l’infrastructure envisagée.
-                        Ce projet comprenait la conception d’un plan réseau précis pour la salle, incluant un plan
-                        d’adressage IP, ainsi que l’élaboration de trois devis clairs pour l’acquisition des équipements
-                        actifs nécessaires. Enfin, nous avons défini un plan de nommage complet, adapté aux besoins
-                        spécifiques de l’entreprise LEARNING TREE.
-                    </p>
-                    <button class="voir-plus" data-image="lt/1.jpg" data-type="doc">Documentation</button>
-                </div>
             </div>
         </section>
 
@@ -316,16 +304,13 @@
                     <ul>
                         <li><a href="https://www.cert.ssi.gouv.fr/" target="_blank">CERT-FR</a> - Dernières alertes et
                             recommandations de sécurité.</li>
-                        <li><a href="https://www.undernews.fr/" target="_blank">UnderNews</a> - Analyses et conseils
-                            pour se protéger.</li>
                     </ul>
                 </div>
                 <div class="veille-card">
                     <h3>Actualités Technologiques</h3>
                     <p>Les dernières vulnérabilités et actualités technologiques :</p>
                     <ul>
-                        <li><a href="https://www.zataz.com/" target="_blank">ZATAZ</a> - Informations sur les dernières
-                            vulnérabilités et actualités technologiques.</li>
+                        <li><a href="https://www.zataz.com/" target="_blank">ZATAZ</a> - Informations sur les dernières actualités technologiques.</li>
                     </ul>
                 </div>
             </div>
@@ -342,6 +327,14 @@
 
                 <button type="submit"><i class="fas fa-paper-plane"></i> Envoyer</button>
             </form>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/guillaume-rochon-7319402b8/" target="_blank" class="linkedin-link">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/gurochon" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
         </section>
 
     </main>
