@@ -651,9 +651,11 @@ footer a:hover {
 
 .bubble-list {
     list-style: none;
-    padding-left: 20px;
+    padding-left: 20;
     color: #bbb;
+    text-align: left;
 }
+
 
 .bubble-list li {
     margin-bottom: 12px;
@@ -711,3 +713,19 @@ footer a:hover {
 .github-link:hover {
     color: #2ea44f;
 }
+
+.sub-list {
+    list-style-type: circle;
+    margin-left: 20px;
+    margin-top: 8px;
+    color: #ccc;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.sub-list li {
+    margin-bottom: 4px;
+    font-size: 0.95em;
+}
+
+
