@@ -594,19 +594,19 @@ footer a:hover {
 }
 
 .bubbles-container {
-    display: flex;
-    flex-direction: column; /* Pour que les bulles s'empilent verticalement */
-    align-items: center;     /* Centre horizontalement les bulles */
-    gap: 30px;               /* Espace entre chaque bulle */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Exactement 3 colonnes */
+    gap: 30px;
+    justify-items: center;
+    width: 100%;
 }
-
 
 .bubble {
     background-color: #3a3a4e;
     border-radius: 20px;
-    padding: 40px 50px; /* Padding raisonnable pour contenu large */
-    width: 600px;        /* Grande largeur comme tu le voulais */
-    min-height: 300px;   /* Pour garantir une bonne hauteur visuelle */
+    padding: 25px 30px; /* Padding raisonnable pour contenu large */
+    width: 400px;        /* Grande largeur comme tu le voulais */
+    min-height: 225px;   /* Pour garantir une bonne hauteur visuelle */
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: left;    /* Aligne le texte à gauche */
@@ -636,11 +636,17 @@ footer a:hover {
 }
 
 .bubble-header h3 {
-    font-size: 1.8em;
+    font-size: 1.4em;
     color: #ff9966;
     margin: 0;
     text-align: center;
     text-transform: uppercase;
+}
+
+.bubble p {
+    font-size: 1em;   /* taille du texte normale mais claire */
+    line-height: 1.5;
+    color: #ccc;
 }
 
 .bubble-list {
@@ -672,4 +678,36 @@ footer a:hover {
 }
 .arrow-right {
     right: 20px;
+}
+
+.social-links {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    color: #ff5f7e;
+    font-size: 1em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.social-links a i {
+    margin-right: 8px;
+    font-size: 1.4em;
+    vertical-align: middle;
+}
+
+.linkedin-link:hover {
+    color: #0a66c2;
+}
+
+.github-link:hover {
+    color: #2ea44f;
 }
